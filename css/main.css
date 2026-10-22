@@ -190,7 +190,7 @@ header {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at top left, rgba(160,0,0,0.35), transparent 55%),
-              linear-gradient(120deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.8) 48%, rgba(0,0,0,0.6) 100%);
+              linear-gradient(120deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.82) 55%, rgba(0,0,0,0.55) 100%);
 }
 
 .hero-content {
@@ -613,3 +613,12 @@ footer {
 .hero-dot.is-active { background: #A00000; border-color: #A00000; box-shadow: 0 0 0 6px rgba(160,0,0,0.18); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 700ms ease, transform 700ms ease; }
 .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+/* Asociate y viaja */
+.asociate-band{padding:clamp(3rem,8vw,6rem) 0;background:linear-gradient(180deg,#fafafa 0%,#f5f5f5 100%)}
+.asociate-inner{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1.5rem,6vw,4rem);align-items:center}
+.asociate-media{grid-column:1/span 6}
+.asociate-media img{border-radius:calc(var(--radius)+6px);box-shadow:0 40px 90px rgba(0,0,0,.12)}
+.asociate-text{grid-column:7/-1;display:flex;flex-direction:column;gap:1.2rem}
+.asociate-text .section-lead{color:#4a4a4a}
+@media(max-width:1080px){.asociate-media{grid-column:1/-1}.asociate-text{grid-column:1/-1}}

@@ -10,12 +10,22 @@
   function go(n){
     slides[idx].classList.remove('is-active');
     dots[idx].classList.remove('is-active');
+    dots[idx].removeAttribute('aria-current');
     idx = (n + slides.length) % slides.length;
     slides[idx].classList.add('is-active');
     dots[idx].classList.add('is-active');
+    dots[idx].setAttribute('aria-current','true');
   }
 
-  dots.forEach((d,i)=>d.addEventListener('click', ()=>{ go(i); restart(); }));
+  dots.forEach((d,i)=>{
+    d.addEventListener('click', ()=>{ go(i); restart(); });
+    d.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        go(i); restart();
+      }
+    });
+  });
 
   function restart(){
     clearInterval(timer);
@@ -23,7 +33,6 @@
   }
   restart();
 
-  // respect reduced motion
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     clearInterval(timer);
   }
