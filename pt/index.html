@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>AGUSCAR | Guincho e socorro 24 horas em Rivera e Livramento</title>
   <meta name="description" content="Guincho, socorro veicular e transporte de veículos em Rivera e Santana do Livramento. Atendimento 24 horas, dois caminhões próprios e planos a partir de UYU 490 por mês.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#a00000">
   <link rel="canonical" href="https://aguscar.com.uy/pt/">
   <link rel="alternate" hreflang="es-UY" href="https://aguscar.com.uy/">
@@ -36,11 +36,19 @@
       "@type": "AutomotiveBusiness",
       "@id": "https://aguscar.com.uy/#business",
       "name": "AGUSCAR",
+      "alternateName": [
+        "AgusCar"
+      ],
       "url": "https://aguscar.com.uy/",
-      "image": "https://aguscar.com.uy/assets/img/aguscar-camion-rojo1.jpg",
-      "logo": "https://aguscar.com.uy/assets/img/logo-aguscar.png",
       "description": "Socorro veicular, guincho e transporte de veículos em Rivera e Santana do Livramento. Dois caminhões próprios e atendimento direto.",
       "telephone": "+59898146411",
+      "image": {
+        "@id": "https://aguscar.com.uy/#imagen-principal"
+      },
+      "logo": {
+        "@id": "https://aguscar.com.uy/#logo"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Celia Bueno de Arizaga 2117, Barrio La Pedrera",
@@ -51,122 +59,32 @@
       },
       "areaServed": [
         {
-          "@type": "City",
-          "name": "Rivera"
+          "@id": "https://aguscar.com.uy/#rivera"
         },
         {
-          "@type": "City",
-          "name": "Santana do Livramento"
+          "@id": "https://aguscar.com.uy/#livramento"
         }
       ],
       "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+59898146411",
-        "contactType": "roadside assistance",
-        "availableLanguage": [
-          "es",
-          "pt-BR"
-        ],
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "https://schema.org/Monday",
-            "https://schema.org/Tuesday",
-            "https://schema.org/Wednesday",
-            "https://schema.org/Thursday",
-            "https://schema.org/Friday",
-            "https://schema.org/Saturday",
-            "https://schema.org/Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
+        "@id": "https://aguscar.com.uy/#contacto"
       },
       "sameAs": [
         "https://www.instagram.com/aguscarauxilio"
       ],
       "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Socorro e resgate",
-              "description": "Assistência em caso de panes, acidentes ou imprevistos. Entre em contato para organizar o atendimento conforme sua localização e o estado do veículo.",
-              "provider": {
-                "@id": "https://aguscar.com.uy/#business"
-              }
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Transporte de veículos",
-              "description": "Transporte e reboque com caminhões próprios. Informe o tipo de veículo, o ponto de partida e o destino para consultar a disponibilidade.",
-              "provider": {
-                "@id": "https://aguscar.com.uy/#business"
-              }
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Bateria e pneus",
-              "description": "Partida auxiliar de bateria, troca de estepe e reparo de pneu. Também venda e instalação de bateria em domicílio. Consulte o serviço necessário.",
-              "provider": {
-                "@id": "https://aguscar.com.uy/#business"
-              }
-            }
-          },
-          {
-            "@type": "Offer",
-            "price": "490",
-            "priceCurrency": "UYU",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "490",
-              "priceCurrency": "UYU",
-              "unitText": "mês"
-            },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plano Básico",
-              "description": "1 transporte por mês; Partida auxiliar de bateria; Troca de estepe e reparo de pneu; Venda e instalação de bateria em domicílio; 50 km sem custo no resgate; 30% de desconto em quilômetros extras",
-              "provider": {
-                "@id": "https://aguscar.com.uy/#business"
-              }
-            }
-          },
-          {
-            "@type": "Offer",
-            "price": "790",
-            "priceCurrency": "UYU",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "790",
-              "priceCurrency": "UYU",
-              "unitText": "mês"
-            },
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plano Gold",
-              "description": "3 transportes por mês; Partida auxiliar de bateria; Troca de estepe e reparo de pneu; Chaveiro automotivo; Mecânica leve e diagnóstico com scanner; Venda e instalação de bateria em domicílio; 100 km sem custo no resgate; 30% de desconto em quilômetros extras",
-              "provider": {
-                "@id": "https://aguscar.com.uy/#business"
-              }
-            }
-          }
-        ]
+        "@id": "https://aguscar.com.uy/#catalogo"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://aguscar.com.uy/pt/#webpage"
       }
     },
     {
       "@type": "WebSite",
       "@id": "https://aguscar.com.uy/#website",
       "name": "AGUSCAR",
+      "alternateName": [
+        "AgusCar"
+      ],
       "url": "https://aguscar.com.uy/",
       "inLanguage": [
         "es-UY",
@@ -177,13 +95,51 @@
       }
     },
     {
-      "@type": "FAQPage",
+      "@type": "WebPage",
       "@id": "https://aguscar.com.uy/pt/#webpage",
       "url": "https://aguscar.com.uy/pt/",
       "name": "AGUSCAR | Guincho e socorro 24 horas em Rivera e Livramento",
+      "description": "Guincho, socorro veicular e transporte de veículos em Rivera e Santana do Livramento. Atendimento 24 horas, dois caminhões próprios e planos a partir de UYU 490 por mês.",
       "inLanguage": "pt-BR",
+      "dateModified": "2026-10-22",
       "isPartOf": {
         "@id": "https://aguscar.com.uy/#website"
+      },
+      "mainEntity": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "about": [
+        {
+          "@id": "https://aguscar.com.uy/#auxilio-vial"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#traslado-vehiculos"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#bateria-neumaticos"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#plan-basico"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#plan-gold"
+        }
+      ],
+      "hasPart": {
+        "@id": "https://aguscar.com.uy/pt/#preguntas-frecuentes"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://aguscar.com.uy/#imagen-principal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aguscar.com.uy/pt/#preguntas-frecuentes",
+      "url": "https://aguscar.com.uy/pt/#preguntas-frecuentes",
+      "name": "Perguntas frequentes",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://aguscar.com.uy/pt/#webpage"
       },
       "about": {
         "@id": "https://aguscar.com.uy/#business"
@@ -191,6 +147,7 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-solicitar",
           "name": "Como solicitar um guincho ou socorro veicular?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -199,6 +156,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-horario",
           "name": "O atendimento funciona 24 horas?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -207,6 +165,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-cobertura",
           "name": "Vocês atendem em Rivera e Santana do Livramento?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -215,6 +174,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-vehiculos",
           "name": "Quais veículos podem ser transportados?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -223,6 +183,25 @@
         },
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-bateria-neumaticos",
+          "name": "Vocês fazem partida auxiliar de bateria e troca de estepe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A AGUSCAR oferece partida auxiliar de bateria, troca de estepe e reparo de pneu, além de venda e instalação de bateria em domicílio. Informe sua localização em Rivera ou Santana do Livramento e a assistência necessária para confirmar a disponibilidade e as condições."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-moneda",
+          "name": "Os valores dos planos estão em pesos uruguaios ou em reais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os valores publicados estão em pesos uruguaios (UYU): Básico, UYU 490 por mês; Gold, UYU 790 por mês. Consulte as condições e a vigência do plano antes de se associar."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-planes",
           "name": "Como funcionam os planos Básico e Gold?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -231,6 +210,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://aguscar.com.uy/pt/#faq-direccion",
           "name": "Onde fica a AGUSCAR e em quais idiomas vocês atendem?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -238,6 +218,336 @@
           }
         }
       ]
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://aguscar.com.uy/#contacto",
+      "telephone": "+59898146411",
+      "contactType": "roadside assistance",
+      "url": "https://aguscar.com.uy/pt/#contacto",
+      "availableLanguage": [
+        "es",
+        "pt-BR"
+      ],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    },
+    {
+      "@type": "Country",
+      "@id": "https://aguscar.com.uy/#uruguay",
+      "name": "Uruguai"
+    },
+    {
+      "@type": "Country",
+      "@id": "https://aguscar.com.uy/#brasil",
+      "name": "Brasil"
+    },
+    {
+      "@type": "City",
+      "@id": "https://aguscar.com.uy/#rivera",
+      "name": "Rivera",
+      "containedInPlace": {
+        "@id": "https://aguscar.com.uy/#uruguay"
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "https://aguscar.com.uy/#livramento",
+      "name": "Santana do Livramento",
+      "containedInPlace": {
+        "@id": "https://aguscar.com.uy/#brasil"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aguscar.com.uy/#imagen-principal",
+      "contentUrl": "https://aguscar.com.uy/assets/img/aguscar-camion-rojo1.jpg",
+      "url": "https://aguscar.com.uy/assets/img/aguscar-camion-rojo1.jpg",
+      "width": 2040,
+      "height": 1528,
+      "caption": "Caminhão da AGUSCAR transportando uma caminhonete em um atendimento noturno"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aguscar.com.uy/#logo",
+      "contentUrl": "https://aguscar.com.uy/assets/img/logo-aguscar.png",
+      "url": "https://aguscar.com.uy/assets/img/logo-aguscar.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://aguscar.com.uy/#catalogo",
+      "name": "Serviços",
+      "itemListElement": [
+        {
+          "@id": "https://aguscar.com.uy/#oferta-auxilio-vial"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#oferta-traslado-vehiculos"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#oferta-bateria-neumaticos"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#oferta-plan-basico"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#oferta-plan-gold"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aguscar.com.uy/#auxilio-vial",
+      "name": "Socorro e resgate",
+      "serviceType": "Socorro e resgate",
+      "description": "Assistência em caso de panes, acidentes ou imprevistos. Entre em contato para organizar o atendimento conforme sua localização e o estado do veículo.",
+      "url": "https://aguscar.com.uy/pt/#auxilio-vial",
+      "provider": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "areaServed": [
+        {
+          "@id": "https://aguscar.com.uy/#rivera"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#livramento"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://aguscar.com.uy/pt/#contacto",
+        "servicePhone": {
+          "@id": "https://aguscar.com.uy/#contacto"
+        },
+        "availableLanguage": [
+          "es",
+          "pt-BR"
+        ]
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@id": "https://aguscar.com.uy/#oferta-auxilio-vial"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aguscar.com.uy/#traslado-vehiculos",
+      "name": "Transporte de veículos",
+      "serviceType": "Transporte de veículos",
+      "description": "Transporte e reboque com caminhões próprios. Informe o tipo de veículo, o ponto de partida e o destino para consultar a disponibilidade.",
+      "url": "https://aguscar.com.uy/pt/#traslado-vehiculos",
+      "provider": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "areaServed": [
+        {
+          "@id": "https://aguscar.com.uy/#rivera"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#livramento"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://aguscar.com.uy/pt/#contacto",
+        "servicePhone": {
+          "@id": "https://aguscar.com.uy/#contacto"
+        },
+        "availableLanguage": [
+          "es",
+          "pt-BR"
+        ]
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@id": "https://aguscar.com.uy/#oferta-traslado-vehiculos"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aguscar.com.uy/#bateria-neumaticos",
+      "name": "Bateria e pneus",
+      "serviceType": "Bateria e pneus",
+      "description": "Partida auxiliar de bateria, troca de estepe e reparo de pneu. Também venda e instalação de bateria em domicílio. Consulte o serviço necessário.",
+      "url": "https://aguscar.com.uy/pt/#bateria-neumaticos",
+      "provider": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "areaServed": [
+        {
+          "@id": "https://aguscar.com.uy/#rivera"
+        },
+        {
+          "@id": "https://aguscar.com.uy/#livramento"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://aguscar.com.uy/pt/#contacto",
+        "servicePhone": {
+          "@id": "https://aguscar.com.uy/#contacto"
+        },
+        "availableLanguage": [
+          "es",
+          "pt-BR"
+        ]
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@id": "https://aguscar.com.uy/#oferta-bateria-neumaticos"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aguscar.com.uy/#plan-basico",
+      "name": "Plano Básico",
+      "description": "1 transporte por mês; Partida auxiliar de bateria; Troca de estepe e reparo de pneu; Venda e instalação de bateria em domicílio; 50 km sem custo no resgate; 30% de desconto em quilômetros extras",
+      "url": "https://aguscar.com.uy/pt/#plan-basico",
+      "provider": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "offers": {
+        "@id": "https://aguscar.com.uy/#oferta-plan-basico"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aguscar.com.uy/#plan-gold",
+      "name": "Plano Gold",
+      "description": "3 transportes por mês; Partida auxiliar de bateria; Troca de estepe e reparo de pneu; Chaveiro automotivo; Mecânica leve e diagnóstico com scanner; Venda e instalação de bateria em domicílio; 100 km sem custo no resgate; 30% de desconto em quilômetros extras",
+      "url": "https://aguscar.com.uy/pt/#plan-gold",
+      "provider": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "offers": {
+        "@id": "https://aguscar.com.uy/#oferta-plan-gold"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://aguscar.com.uy/#oferta-auxilio-vial",
+      "itemOffered": {
+        "@id": "https://aguscar.com.uy/#auxilio-vial"
+      },
+      "seller": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "url": "https://aguscar.com.uy/pt/#auxilio-vial"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://aguscar.com.uy/#oferta-traslado-vehiculos",
+      "itemOffered": {
+        "@id": "https://aguscar.com.uy/#traslado-vehiculos"
+      },
+      "seller": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "url": "https://aguscar.com.uy/pt/#traslado-vehiculos"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://aguscar.com.uy/#oferta-bateria-neumaticos",
+      "itemOffered": {
+        "@id": "https://aguscar.com.uy/#bateria-neumaticos"
+      },
+      "seller": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "url": "https://aguscar.com.uy/pt/#bateria-neumaticos"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://aguscar.com.uy/#oferta-plan-basico",
+      "itemOffered": {
+        "@id": "https://aguscar.com.uy/#plan-basico"
+      },
+      "seller": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "url": "https://aguscar.com.uy/pt/#plan-basico",
+      "price": "490",
+      "priceCurrency": "UYU",
+      "description": "Valores mensais em pesos uruguaios (UYU). Consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições de cada benefício antes de se associar.",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "490",
+        "priceCurrency": "UYU",
+        "unitText": "mês"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://aguscar.com.uy/#oferta-plan-gold",
+      "itemOffered": {
+        "@id": "https://aguscar.com.uy/#plan-gold"
+      },
+      "seller": {
+        "@id": "https://aguscar.com.uy/#business"
+      },
+      "url": "https://aguscar.com.uy/pt/#plan-gold",
+      "price": "790",
+      "priceCurrency": "UYU",
+      "description": "Valores mensais em pesos uruguaios (UYU). Consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições de cada benefício antes de se associar.",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "790",
+        "priceCurrency": "UYU",
+        "unitText": "mês"
+      }
     }
   ]
 }
@@ -261,13 +571,13 @@
       <div class="container hero-content"><div class="hero-text"><p class="eyebrow">Assistência na estrada · 24 horas</p><h1 id="inicio-titulo">Guincho e socorro veicular <span>em Rivera e Santana do Livramento.</span></h1><p class="hero-lead">Quando seu veículo para, estamos aqui para ajudar. Dois caminhões próprios e atendimento direto para organizar o socorro ou transporte.</p><div class="hero-actions"><a class="btn btn-primary" href="tel:+59898146411"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>Ligar agora</a><a class="btn btn-outline" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20de%20socorro%20ou%20transporte%20de%20ve%C3%ADculo.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Pedir ajuda pelo WhatsApp</a></div><p class="hero-note">Ligue ou envie sua localização pelo WhatsApp para combinar o atendimento.</p></div></div>
     </section>
     <div class="trust-strip"><div class="container trust-grid"><div class="trust-item"><span class="trust-number">24 h</span><div><strong>365 dias por ano</strong><p>Assistência na estrada</p></div></div><div class="trust-item"><span class="trust-number">02</span><div><strong>Caminhões próprios</strong><p>Socorro e transporte de veículos</p></div></div><div class="trust-item"><span class="trust-number">ES / PT</span><div><strong>Atendimento direto</strong><p>Falamos espanhol e português</p></div></div></div></div>
-    <section id="servicios" class="section" aria-labelledby="servicios-titulo"><div class="container"><div class="section-heading"><span class="section-kicker">Serviços</span><h2 class="section-title" id="servicios-titulo">Uma solução para seguir seu caminho.</h2><p class="section-lead">Conte o que aconteceu e onde você está. Organizamos a assistência e o equipamento adequado para o seu veículo.</p></div><div class="services-grid"><article class="service-card"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-rojo1-480.webp 480w, ../assets/img/aguscar-camion-rojo1-960.webp 960w, ../assets/img/aguscar-camion-rojo1-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-rojo1.jpg" alt="Caminhão da AGUSCAR transportando uma caminhonete em um atendimento noturno" width="2040" height="1528" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">01</span><h3>Socorro e resgate</h3><p>Assistência em caso de panes, acidentes ou imprevistos. Entre em contato para organizar o atendimento conforme sua localização e o estado do veículo.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Socorro%20e%20resgate.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article><article class="service-card"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-1-480.webp 480w, ../assets/img/aguscar-camion-1-960.webp 960w, ../assets/img/aguscar-camion-1-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-1.jpg" alt="Caminhão da AGUSCAR realizando um transporte de equipamento" width="2048" height="1152" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">02</span><h3>Transporte de veículos</h3><p>Transporte e reboque com caminhões próprios. Informe o tipo de veículo, o ponto de partida e o destino para consultar a disponibilidade.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Transporte%20de%20ve%C3%ADculos.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article><article class="service-card"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-2-480.webp 480w, ../assets/img/aguscar-camion-2-960.webp 960w, ../assets/img/aguscar-camion-2-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-2.jpg" alt="Caminhão da AGUSCAR prestando assistência e transportando um automóvel" width="2040" height="1528" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">03</span><h3>Bateria e pneus</h3><p>Partida auxiliar de bateria, troca de estepe e reparo de pneu. Também venda e instalação de bateria em domicílio. Consulte o serviço necessário.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Bateria%20e%20pneus.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article></div></div></section>
+    <section id="servicios" class="section" aria-labelledby="servicios-titulo"><div class="container"><div class="section-heading"><span class="section-kicker">Serviços</span><h2 class="section-title" id="servicios-titulo">Uma solução para seguir seu caminho.</h2><p class="section-lead">Conte o que aconteceu e onde você está. Organizamos a assistência e o equipamento adequado para o seu veículo.</p></div><div class="services-grid"><article class="service-card" id="auxilio-vial"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-rojo1-480.webp 480w, ../assets/img/aguscar-camion-rojo1-960.webp 960w, ../assets/img/aguscar-camion-rojo1-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-rojo1.jpg" alt="Caminhão da AGUSCAR transportando uma caminhonete em um atendimento noturno" width="2040" height="1528" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">01</span><h3>Socorro e resgate</h3><p>Assistência em caso de panes, acidentes ou imprevistos. Entre em contato para organizar o atendimento conforme sua localização e o estado do veículo.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Socorro%20e%20resgate.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article><article class="service-card" id="traslado-vehiculos"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-1-480.webp 480w, ../assets/img/aguscar-camion-1-960.webp 960w, ../assets/img/aguscar-camion-1-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-1.jpg" alt="Caminhão da AGUSCAR realizando um transporte de equipamento" width="2048" height="1152" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">02</span><h3>Transporte de veículos</h3><p>Transporte e reboque com caminhões próprios. Informe o tipo de veículo, o ponto de partida e o destino para consultar a disponibilidade.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Transporte%20de%20ve%C3%ADculos.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article><article class="service-card" id="bateria-neumaticos"><div class="service-media"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-2-480.webp 480w, ../assets/img/aguscar-camion-2-960.webp 960w, ../assets/img/aguscar-camion-2-1600.webp 1600w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px"><img src="../assets/img/aguscar-camion-2.jpg" alt="Caminhão da AGUSCAR prestando assistência e transportando um automóvel" width="2040" height="1528" loading="lazy" decoding="async"></picture></div><div class="service-content"><span class="service-number">03</span><h3>Bateria e pneus</h3><p>Partida auxiliar de bateria, troca de estepe e reparo de pneu. Também venda e instalação de bateria em domicílio. Consulte o serviço necessário.</p><a class="text-link" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20sobre%20Bateria%20e%20pneus.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Consultar este serviço</a></div></article></div></div></section>
     <section id="planes" class="section plans-section" aria-labelledby="planes-titulo"><div class="container"><div class="plans-intro"><div class="section-heading"><span class="section-kicker">Associe-se e viaje</span><h2 class="section-title" id="planes-titulo">Escolha seu plano. Viaje com tranquilidade.</h2><p class="section-lead">Duas opções de assistência para acompanhar você na estrada, com atendimento 24 horas por dia, 365 dias por ano.</p></div><span class="availability-chip">Assistência 24 h · 365 dias</span></div><div class="plans-grid"><article class="plan" aria-labelledby="plan-basico"><h3 id="plan-basico" class="plan-name">Plano Básico</h3><p class="plan-tagline">Para viajar com tranquilidade.</p><p class="plan-price"><span class="currency">UYU</span><strong>490</strong><span class="period">/ mês</span></p><ul class="plan-benefits"><li>1 transporte por mês</li><li>Partida auxiliar de bateria</li><li>Troca de estepe e reparo de pneu</li><li>Venda e instalação de bateria em domicílio</li><li>50 km sem custo no resgate</li><li>30% de desconto em quilômetros extras</li></ul><a class="btn btn-dark" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20o%20plano%20B%C3%A1sico%20e%20suas%20condi%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Consultar plano Básico</a></article><article class="plan plan-featured" aria-labelledby="plan-gold"><h3 id="plan-gold" class="plan-name">Plano Gold</h3><p class="plan-tagline">Mais transportes e mais assistência.</p><p class="plan-price"><span class="currency">UYU</span><strong>790</strong><span class="period">/ mês</span></p><ul class="plan-benefits"><li>3 transportes por mês</li><li>Partida auxiliar de bateria</li><li>Troca de estepe e reparo de pneu</li><li>Chaveiro automotivo</li><li>Mecânica leve e diagnóstico com scanner</li><li>Venda e instalação de bateria em domicílio</li><li>100 km sem custo no resgate</li><li>30% de desconto em quilômetros extras</li></ul><a class="btn btn-primary" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20quero%20consultar%20o%20plano%20Gold%20e%20suas%20condi%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Consultar plano Gold</a></article></div><p class="plans-terms">Valores mensais em pesos uruguaios (UYU). Consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições de cada benefício antes de se associar.</p><p class="plans-terms">Consulte também a cobertura Mercosul do plano Gold.</p><p class="plans-more"><a class="text-link" href="../assets/img/asociate-y-viaja.jpg" target="_blank" rel="noopener noreferrer">Ver os detalhes no material dos planos</a></p></div></section>
-    <section id="cobertura" class="section coverage-section" aria-labelledby="cobertura-titulo"><div class="container coverage-grid"><div><span class="section-kicker">Cobertura</span><h2 class="section-title" id="cobertura-titulo">Deste lado e do outro da fronteira.</h2><p class="section-lead">Atendemos em Rivera e Santana do Livramento. Para outros destinos, informe a origem e o trajeto para confirmar a cobertura e as condições.</p><ul class="coverage-cities"><li>Rivera, Uruguay</li><li>Santana do Livramento, Brasil</li></ul><address class="coverage-address"><strong>Nosso escritório</strong>Celia Bueno de Arizaga 2117<br>Barrio La Pedrera, Rivera, Uruguay.<br>Combine previamente o atendimento no escritório.</address><div class="hero-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a><a class="btn btn-primary" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20consultar%20um%20transporte.%20Origem%3A%20.%20Destino%3A%20.%20Ve%C3%ADculo%3A%20." target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Consultar um transporte</a></div></div><figure class="coverage-photo"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-1-480.webp 480w, ../assets/img/aguscar-camion-1-960.webp 960w, ../assets/img/aguscar-camion-1-1600.webp 1600w" sizes="(max-width: 900px) calc(100vw - 36px), 550px"><img src="../assets/img/aguscar-camion-1.jpg" alt="Caminhão da AGUSCAR realizando um transporte de equipamento" width="2048" height="1152" loading="lazy" decoding="async"></picture><figcaption>Frota própria para socorro e transporte de veículos.</figcaption></figure></div></section>
-    <section class="section" id="preguntas-frecuentes" aria-labelledby="faq-titulo"><div class="container faq-layout"><div class="section-heading"><span class="section-kicker">Perguntas frequentes</span><h2 class="section-title" id="faq-titulo">O que você precisa saber antes de ligar.</h2><p class="section-lead">Informações claras para pedir assistência, conhecer a cobertura e escolher seu plano.</p></div><div class="faq-list" id="faq-list"><details class="faq-item" id="faq-solicitar"><summary>Como solicitar um guincho ou socorro veicular?</summary><div class="faq-answer"><p>Ligue para +598 98 146 411 ou fale conosco pelo WhatsApp. Informe sua localização, a marca e o modelo do veículo, o que aconteceu e o destino do transporte, se necessário. Você combina o atendimento diretamente com a AGUSCAR.</p></div></details><details class="faq-item" id="faq-horario"><summary>O atendimento funciona 24 horas?</summary><div class="faq-answer"><p>Sim, oferecemos assistência na estrada 24 horas por dia, 365 dias por ano. Entre em contato para confirmar a disponibilidade e combinar o atendimento. Para atendimento no escritório, consulte o horário previamente.</p></div></details><details class="faq-item" id="faq-cobertura"><summary>Vocês atendem em Rivera e Santana do Livramento?</summary><div class="faq-answer"><p>Sim. Prestamos socorro veicular e organizamos transportes em Rivera e Santana do Livramento. Para outras localidades ou trajetos entre Uruguai e Brasil, informe a origem e o destino para confirmar a cobertura e as condições.</p></div></details><details class="faq-item" id="faq-vehiculos"><summary>Quais veículos podem ser transportados?</summary><div class="faq-answer"><p>Contamos com dois caminhões próprios para o transporte de veículos. O atendimento depende do tipo, tamanho e estado do veículo: envie essas informações e, se possível, uma foto para confirmar o equipamento adequado.</p></div></details><details class="faq-item" id="faq-planes"><summary>Como funcionam os planos Básico e Gold?</summary><div class="faq-answer"><p>O plano Básico custa UYU 490 por mês e o Gold custa UYU 790 por mês. Ambos oferecem transportes mensais, quilômetros de resgate incluídos e benefícios de assistência. Compare os detalhes de cada plano e consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições ao se associar.</p></div></details><details class="faq-item" id="faq-direccion"><summary>Onde fica a AGUSCAR e em quais idiomas vocês atendem?</summary><div class="faq-answer"><p>Nosso escritório fica na Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguai. Atendemos em espanhol e português. Você pode ligar ou enviar uma mensagem antes da visita para combinar o atendimento.</p></div></details></div></div></section>
+    <section id="cobertura" class="section coverage-section" aria-labelledby="cobertura-titulo"><div class="container coverage-grid"><div><span class="section-kicker">Cobertura</span><h2 class="section-title" id="cobertura-titulo">Deste lado e do outro da fronteira.</h2><p class="section-lead">Atendemos em Rivera e Santana do Livramento. Para outros destinos, informe a origem e o trajeto para confirmar a cobertura e as condições.</p><ul class="coverage-cities"><li>Rivera, Uruguai</li><li>Santana do Livramento, Brasil</li></ul><address class="coverage-address"><strong>Nosso escritório</strong>Celia Bueno de Arizaga 2117<br>Barrio La Pedrera, Rivera, Uruguai.<br>Combine previamente o atendimento no escritório.</address><div class="hero-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a><a class="btn btn-primary" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20consultar%20um%20transporte.%20Origem%3A%20.%20Destino%3A%20.%20Ve%C3%ADculo%3A%20." target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Consultar um transporte</a></div></div><figure class="coverage-photo"><picture><source type="image/webp" srcset="../assets/img/aguscar-camion-1-480.webp 480w, ../assets/img/aguscar-camion-1-960.webp 960w, ../assets/img/aguscar-camion-1-1600.webp 1600w" sizes="(max-width: 900px) calc(100vw - 36px), 550px"><img src="../assets/img/aguscar-camion-1.jpg" alt="Caminhão da AGUSCAR realizando um transporte de equipamento" width="2048" height="1152" loading="lazy" decoding="async"></picture><figcaption>Frota própria para socorro e transporte de veículos.</figcaption></figure></div></section>
+    <section class="section" id="preguntas-frecuentes" aria-labelledby="faq-titulo"><div class="container faq-layout"><div class="section-heading"><span class="section-kicker">Perguntas frequentes</span><h2 class="section-title" id="faq-titulo">O que você precisa saber antes de ligar.</h2><p class="section-lead">Informações claras para pedir assistência, conhecer a cobertura e escolher seu plano.</p></div><div class="faq-list" id="faq-list"><details class="faq-item" id="faq-solicitar"><summary>Como solicitar um guincho ou socorro veicular?</summary><div class="faq-answer"><p>Ligue para +598 98 146 411 ou fale conosco pelo WhatsApp. Informe sua localização, a marca e o modelo do veículo, o que aconteceu e o destino do transporte, se necessário. Você combina o atendimento diretamente com a AGUSCAR.</p></div></details><details class="faq-item" id="faq-horario"><summary>O atendimento funciona 24 horas?</summary><div class="faq-answer"><p>Sim, oferecemos assistência na estrada 24 horas por dia, 365 dias por ano. Entre em contato para confirmar a disponibilidade e combinar o atendimento. Para atendimento no escritório, consulte o horário previamente.</p></div></details><details class="faq-item" id="faq-cobertura"><summary>Vocês atendem em Rivera e Santana do Livramento?</summary><div class="faq-answer"><p>Sim. Prestamos socorro veicular e organizamos transportes em Rivera e Santana do Livramento. Para outras localidades ou trajetos entre Uruguai e Brasil, informe a origem e o destino para confirmar a cobertura e as condições.</p></div></details><details class="faq-item" id="faq-vehiculos"><summary>Quais veículos podem ser transportados?</summary><div class="faq-answer"><p>Contamos com dois caminhões próprios para o transporte de veículos. O atendimento depende do tipo, tamanho e estado do veículo: envie essas informações e, se possível, uma foto para confirmar o equipamento adequado.</p></div></details><details class="faq-item" id="faq-bateria-neumaticos"><summary>Vocês fazem partida auxiliar de bateria e troca de estepe?</summary><div class="faq-answer"><p>Sim. A AGUSCAR oferece partida auxiliar de bateria, troca de estepe e reparo de pneu, além de venda e instalação de bateria em domicílio. Informe sua localização em Rivera ou Santana do Livramento e a assistência necessária para confirmar a disponibilidade e as condições.</p></div></details><details class="faq-item" id="faq-moneda"><summary>Os valores dos planos estão em pesos uruguaios ou em reais?</summary><div class="faq-answer"><p>Os valores publicados estão em pesos uruguaios (UYU): Básico, UYU 490 por mês; Gold, UYU 790 por mês. Consulte as condições e a vigência do plano antes de se associar.</p></div></details><details class="faq-item" id="faq-planes"><summary>Como funcionam os planos Básico e Gold?</summary><div class="faq-answer"><p>O plano Básico custa UYU 490 por mês e o Gold custa UYU 790 por mês. Ambos oferecem transportes mensais, quilômetros de resgate incluídos e benefícios de assistência. Compare os detalhes de cada plano e consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições ao se associar.</p></div></details><details class="faq-item" id="faq-direccion"><summary>Onde fica a AGUSCAR e em quais idiomas vocês atendem?</summary><div class="faq-answer"><p>Nosso escritório fica na Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguai. Atendemos em espanhol e português. Você pode ligar ou enviar uma mensagem antes da visita para combinar o atendimento.</p></div></details></div></div></section>
     <section class="contact-section" id="contacto" aria-labelledby="contacto-titulo"><div class="container contact-inner"><div><h2 id="contacto-titulo">Precisa de ajuda? Fale direto com a gente.</h2><p>Conte onde você está e o que aconteceu. Combinamos o próximo passo com você.</p></div><div class="hero-actions"><a class="btn btn-light" href="tel:+59898146411"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>Ligar agora</a><a class="btn btn-outline" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20de%20socorro%20ou%20transporte%20de%20ve%C3%ADculo.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>Pedir ajuda pelo WhatsApp</a></div></div></section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#inicio" aria-label="AGUSCAR"><picture><source type="image/webp" srcset="../assets/img/logo-aguscar.webp"><img src="../assets/img/logo-aguscar.png" alt="" width="56" height="56"></picture><span><span class="brand-name">AGUSCAR</span><span class="brand-sub">Guincho e transporte</span></span></a><p class="footer-description">Socorro veicular, guincho e transporte de veículos em Rivera e Santana do Livramento. Dois caminhões próprios e atendimento direto.</p></div><div class="footer-block"><h2>Telefone e WhatsApp</h2><a class="" href="tel:+59898146411">+598 98 146 411</a><a class="" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20de%20socorro%20ou%20transporte%20de%20ve%C3%ADculo.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="" href="https://www.instagram.com/aguscarauxilio" target="_blank" rel="noopener noreferrer">@aguscarauxilio</a></div><div class="footer-block"><h2>Onde estamos</h2><address>Celia Bueno de Arizaga 2117<br>Barrio La Pedrera, Rivera<br>Uruguay</address><a class="" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Como chegar</a></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> AGUSCAR. Todos os direitos reservados.</p><p>Desenvolvido por <a class="" href="https://www.fbinformaticauy.com" target="_blank" rel="noopener noreferrer">FB Informática</a></p></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#inicio" aria-label="AGUSCAR"><picture><source type="image/webp" srcset="../assets/img/logo-aguscar.webp"><img src="../assets/img/logo-aguscar.png" alt="" width="56" height="56"></picture><span><span class="brand-name">AGUSCAR</span><span class="brand-sub">Guincho e transporte</span></span></a><p class="footer-description">Socorro veicular, guincho e transporte de veículos em Rivera e Santana do Livramento. Dois caminhões próprios e atendimento direto.</p></div><div class="footer-block"><h2>Telefone e WhatsApp</h2><a class="" href="tel:+59898146411">+598 98 146 411</a><a class="" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20de%20socorro%20ou%20transporte%20de%20ve%C3%ADculo.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="" href="https://www.instagram.com/aguscarauxilio" target="_blank" rel="noopener noreferrer">@aguscarauxilio</a></div><div class="footer-block"><h2>Onde estamos</h2><address>Celia Bueno de Arizaga 2117<br>Barrio La Pedrera, Rivera<br>Uruguai</address><a class="" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Como chegar</a></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> AGUSCAR. Todos os direitos reservados.</p><p>Desenvolvido por <a class="" href="https://www.fbinformaticauy.com" target="_blank" rel="noopener noreferrer">FB Informática</a></p></div></div></footer>
   <nav class="mobile-contact" aria-label="Contato"><a class="btn btn-primary" href="tel:+59898146411"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-3 2a16 16 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>Ligar agora</a><a class="btn btn-dark" href="https://wa.me/59898146411?text=Ol%C3%A1%20AGUSCAR%2C%20preciso%20de%20socorro%20ou%20transporte%20de%20ve%C3%ADculo.%20Minha%20localiza%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.3-4.5A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1a8 8 0 0 1-3.5-3.5l1-1-1-3Z"/></svg>WhatsApp</a></nav>
   <script src="../js/year.js?v=bbf1b9a80f" defer></script>
   <script src="../js/hero-carousel.js?v=552f6d1f7e" defer></script>

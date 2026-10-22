@@ -10,12 +10,13 @@ from xml.etree.ElementTree import Element, SubElement, ElementTree, register_nam
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))
 ASSETS = json.loads((ROOT / "content/assets.json").read_text(encoding="utf-8"))
+SERVICE_IDS = ("auxilio-vial", "traslado-vehiculos", "bateria-neumaticos")
 
 COPY = {
     "es": {
         "title": "AGUSCAR | Grúa y auxilio vial 24 horas en Rivera y Livramento",
         "description": "Grúa, auxilio vial y traslado de vehículos en Rivera y Santana do Livramento. Atención 24 horas, dos camiones propios y planes desde UYU 490 al mes.",
-        "skip": "Saltar al contenido principal", "brand": "Auxilio y traslado", "nav": "Navegación principal", "languages": "Elegir idioma",
+        "skip": "Saltar al contenido principal", "brand": "Auxilio y traslado", "nav": "Navegación principal", "languages": "Elegir idioma", "countryName": "Uruguay",
         "services": "Servicios", "plans": "Planes", "coverage": "Cobertura", "contact": "Contacto", "call": "Llamar ahora", "wa": "Pedir auxilio por WhatsApp",
         "eyebrow": "Asistencia en el camino · 24 horas", "h1": "Grúa y auxilio vial", "h1place": "en Rivera y Santana do Livramento.",
         "heroLead": "Cuando tu vehículo se detiene, estamos para ayudarte. Dos camiones propios y atención directa para coordinar tu auxilio o traslado.",
@@ -45,7 +46,7 @@ COPY = {
     "pt-BR": {
         "title": "AGUSCAR | Guincho e socorro 24 horas em Rivera e Livramento",
         "description": "Guincho, socorro veicular e transporte de veículos em Rivera e Santana do Livramento. Atendimento 24 horas, dois caminhões próprios e planos a partir de UYU 490 por mês.",
-        "skip": "Pular para o conteúdo principal", "brand": "Guincho e transporte", "nav": "Navegação principal", "languages": "Escolher idioma",
+        "skip": "Pular para o conteúdo principal", "brand": "Guincho e transporte", "nav": "Navegação principal", "languages": "Escolher idioma", "countryName": "Uruguai",
         "services": "Serviços", "plans": "Planos", "coverage": "Cobertura", "contact": "Contato", "call": "Ligar agora", "wa": "Pedir ajuda pelo WhatsApp",
         "eyebrow": "Assistência na estrada · 24 horas", "h1": "Guincho e socorro veicular", "h1place": "em Rivera e Santana do Livramento.",
         "heroLead": "Quando seu veículo para, estamos aqui para ajudar. Dois caminhões próprios e atendimento direto para organizar o socorro ou transporte.",
@@ -123,15 +124,114 @@ def brand(prefix, t):
 def schema(lang, t, url):
     b = DATA["business"]
     base = b["url"]
-    services = [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": card[0], "description": card[1], "provider": {"@id": base + "/#business"}}} for card in t["serviceCards"]]
-    for plan in DATA["plans"]:
-        services.append({"@type": "Offer", "price": str(plan["price"]), "priceCurrency": b["currency"], "priceSpecification": {"@type": "UnitPriceSpecification", "price": str(plan["price"]), "priceCurrency": b["currency"], "unitText": "mes" if lang == "es" else "mês"}, "itemOffered": {"@type": "Service", "name": f'{t["planPrefix"]} {plan["name"][lang]}', "description": "; ".join(item[lang] for item in plan["benefits"]), "provider": {"@id": base + "/#business"}}})
+    business_id = base + "/#business"
+    website_id = base + "/#website"
+    page_id = url + "#webpage"
+    faq_id = url + "#preguntas-frecuentes"
+    contact_id = base + "/#contacto"
+    catalog_id = base + "/#catalogo"
+    area_ids = [base + "/#rivera", base + "/#livramento"]
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    return {"@context": "https://schema.org", "@graph": [
-        {"@type": "AutomotiveBusiness", "@id": base + "/#business", "name": b["name"], "url": base + "/", "image": base + "/assets/img/aguscar-camion-rojo1.jpg", "logo": base + "/assets/img/logo-aguscar.png", "description": t["footerDescription"], "telephone": b["telephone"], "address": {"@type": "PostalAddress", "streetAddress": b["street"] + ", " + b["neighborhood"], "addressLocality": b["city"], "addressRegion": b["region"], "postalCode": b["postalCode"], "addressCountry": b["country"]}, "areaServed": [{"@type": "City", "name": name} for name in ("Rivera", "Santana do Livramento")], "contactPoint": {"@type": "ContactPoint", "telephone": b["telephone"], "contactType": "roadside assistance", "availableLanguage": ["es", "pt-BR"], "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/" + d for d in days], "opens": "00:00", "closes": "23:59"}}, "sameAs": [b["instagram"]], "hasOfferCatalog": {"@type": "OfferCatalog", "name": t["services"], "itemListElement": services}},
-        {"@type": "WebSite", "@id": base + "/#website", "name": "AGUSCAR", "url": base + "/", "inLanguage": ["es-UY", "pt-BR"], "publisher": {"@id": base + "/#business"}},
-        {"@type": "FAQPage", "@id": url + "#webpage", "url": url, "name": t["title"], "inLanguage": "es-UY" if lang == "es" else lang, "isPartOf": {"@id": base + "/#website"}, "about": {"@id": base + "/#business"}, "mainEntity": [{"@type": "Question", "name": faq["question"][lang], "acceptedAnswer": {"@type": "Answer", "text": faq_answer(faq, lang)}} for faq in DATA["faq"]]},
-    ]}
+    hours = {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["https://schema.org/" + d for d in days],
+        "opens": "00:00", "closes": "23:59",
+    }
+    ref = lambda id_: {"@id": id_}
+    # Las entidades conservan sus identificadores entre idiomas y publicaciones.
+    service_nodes = []
+    offer_nodes = []
+    for id_, card in zip(SERVICE_IDS, t["serviceCards"]):
+        service_id = base + "/#" + id_
+        offer_id = base + "/#oferta-" + id_
+        service_nodes.append({
+            "@type": "Service", "@id": service_id,
+            "name": card[0], "serviceType": card[0], "description": card[1],
+            "url": url + "#" + id_, "provider": ref(business_id),
+            "areaServed": [ref(area) for area in area_ids],
+            "availableChannel": {
+                "@type": "ServiceChannel", "serviceUrl": url + "#contacto",
+                "servicePhone": ref(contact_id), "availableLanguage": ["es", "pt-BR"],
+            },
+            "hoursAvailable": hours, "offers": ref(offer_id),
+        })
+        offer_nodes.append({
+            "@type": "Offer", "@id": offer_id,
+            "itemOffered": ref(service_id), "seller": ref(business_id),
+            "url": url + "#" + id_,
+        })
+    for plan in DATA["plans"]:
+        service_id = base + "/#plan-" + plan["id"]
+        offer_id = base + "/#oferta-plan-" + plan["id"]
+        service_nodes.append({
+            "@type": "Service", "@id": service_id,
+            "name": f'{t["planPrefix"]} {plan["name"][lang]}',
+            "description": "; ".join(item[lang] for item in plan["benefits"]),
+            "url": url + "#plan-" + plan["id"],
+            "provider": ref(business_id), "offers": ref(offer_id),
+        })
+        offer_nodes.append({
+            "@type": "Offer", "@id": offer_id, "itemOffered": ref(service_id),
+            "seller": ref(business_id), "url": url + "#plan-" + plan["id"],
+            "price": str(plan["price"]), "priceCurrency": b["currency"],
+            "description": t["planTerms"],
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification", "price": str(plan["price"]),
+                "priceCurrency": b["currency"], "unitText": "mes" if lang == "es" else "mês",
+            },
+        })
+    photo = ASSETS["aguscar-camion-rojo1"]
+    graph = [
+        {
+            "@type": "AutomotiveBusiness", "@id": business_id,
+            "name": b["name"], "alternateName": b["alternateNames"],
+            "url": base + "/", "description": t["footerDescription"],
+            "telephone": b["telephone"], "image": ref(base + "/#imagen-principal"),
+            "logo": ref(base + "/#logo"), "hasMap": b["maps"],
+            "address": {
+                "@type": "PostalAddress", "streetAddress": b["street"] + ", " + b["neighborhood"],
+                "addressLocality": b["city"], "addressRegion": b["region"],
+                "postalCode": b["postalCode"], "addressCountry": b["country"],
+            },
+            "areaServed": [ref(area) for area in area_ids],
+            "contactPoint": ref(contact_id), "sameAs": [b["instagram"]],
+            "hasOfferCatalog": ref(catalog_id), "mainEntityOfPage": ref(page_id),
+        },
+        {"@type": "WebSite", "@id": website_id, "name": b["name"],
+         "alternateName": b["alternateNames"], "url": base + "/",
+         "inLanguage": ["es-UY", "pt-BR"], "publisher": ref(business_id)},
+        {"@type": "WebPage", "@id": page_id, "url": url, "name": t["title"],
+         "description": t["description"], "inLanguage": "es-UY" if lang == "es" else lang,
+         "dateModified": DATA["updatedAt"], "isPartOf": ref(website_id),
+         "mainEntity": ref(business_id), "about": [ref(s["@id"]) for s in service_nodes],
+         "hasPart": ref(faq_id), "primaryImageOfPage": ref(base + "/#imagen-principal")},
+        {"@type": "FAQPage", "@id": faq_id, "url": faq_id,
+         "name": t["faqKicker"], "inLanguage": "es-UY" if lang == "es" else lang,
+         "isPartOf": ref(page_id), "about": ref(business_id),
+         "mainEntity": [
+             {"@type": "Question", "@id": url + "#faq-" + faq["id"],
+              "name": faq["question"][lang],
+              "acceptedAnswer": {"@type": "Answer", "text": faq_answer(faq, lang)}}
+             for faq in DATA["faq"]
+         ]},
+        {"@type": "ContactPoint", "@id": contact_id, "telephone": b["telephone"],
+         "contactType": "roadside assistance", "url": url + "#contacto",
+         "availableLanguage": ["es", "pt-BR"], "hoursAvailable": hours},
+        {"@type": "Country", "@id": base + "/#uruguay", "name": t["countryName"]},
+        {"@type": "Country", "@id": base + "/#brasil", "name": "Brasil"},
+        {"@type": "City", "@id": area_ids[0], "name": "Rivera", "containedInPlace": ref(base + "/#uruguay")},
+        {"@type": "City", "@id": area_ids[1], "name": "Santana do Livramento", "containedInPlace": ref(base + "/#brasil")},
+        {"@type": "ImageObject", "@id": base + "/#imagen-principal",
+         "contentUrl": base + "/assets/img/" + photo["file"],
+         "url": base + "/assets/img/" + photo["file"],
+         "width": photo["width"], "height": photo["height"], "caption": t["serviceCards"][0][3]},
+        {"@type": "ImageObject", "@id": base + "/#logo",
+         "contentUrl": base + "/assets/img/logo-aguscar.png",
+         "url": base + "/assets/img/logo-aguscar.png", "width": 256, "height": 256},
+        {"@type": "OfferCatalog", "@id": catalog_id, "name": t["services"],
+         "itemListElement": [ref(offer["@id"]) for offer in offer_nodes]},
+    ]
+    return {"@context": "https://schema.org", "@graph": graph + service_nodes + offer_nodes}
 
 
 def render(lang):
@@ -149,7 +249,7 @@ def render(lang):
     first_current = ' aria-current="true"'
     dots = "".join(f'<button class="hero-dot" type="button" data-dot aria-label="{e(t["slide"])} {i + 1}"{first_current if i == 0 else ""}>{i + 1:02}</button>' for i in range(3))
     trust = "".join(f'<div class="trust-item"><span class="trust-number">{e(number)}</span><div><strong>{e(title)}</strong><p>{e(lead)}</p></div></div>' for number, title, lead in t["trust"])
-    services = "".join(f'<article class="service-card"><div class="service-media">{picture(name, alt, prefix, "(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px")}</div><div class="service-content"><span class="service-number">0{i + 1}</span><h3>{e(title)}</h3><p>{e(lead)}</p>{link(wa(t["serviceMessage"].format(name=title)), t["serviceCta"], "text-link", "arrow", True)}</div></article>' for i, (title, lead, name, alt) in enumerate(t["serviceCards"]))
+    services = "".join(f'<article class="service-card" id="{SERVICE_IDS[i]}"><div class="service-media">{picture(name, alt, prefix, "(max-width: 720px) calc(100vw - 36px), (max-width: 1208px) 31vw, 370px")}</div><div class="service-content"><span class="service-number">0{i + 1}</span><h3>{e(title)}</h3><p>{e(lead)}</p>{link(wa(t["serviceMessage"].format(name=title)), t["serviceCta"], "text-link", "arrow", True)}</div></article>' for i, (title, lead, name, alt) in enumerate(t["serviceCards"]))
     plans = ""
     for plan in DATA["plans"]:
         name = plan["name"][lang]
@@ -165,7 +265,7 @@ def render(lang):
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{e(t["title"])}</title>
   <meta name="description" content="{e(t["description"])}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="theme-color" content="#a00000">
   <link rel="canonical" href="{e(url)}">
   <link rel="alternate" hreflang="es-UY" href="{e(b["url"])}/">
@@ -212,11 +312,11 @@ def render(lang):
     <div class="trust-strip"><div class="container trust-grid">{trust}</div></div>
     <section id="servicios" class="section" aria-labelledby="servicios-titulo"><div class="container"><div class="section-heading"><span class="section-kicker">{e(t["services"])}</span><h2 class="section-title" id="servicios-titulo">{e(t["servicesTitle"])}</h2><p class="section-lead">{e(t["servicesLead"])}</p></div><div class="services-grid">{services}</div></div></section>
     <section id="planes" class="section plans-section" aria-labelledby="planes-titulo"><div class="container"><div class="plans-intro"><div class="section-heading"><span class="section-kicker">{e(t["planKicker"])}</span><h2 class="section-title" id="planes-titulo">{e(t["planTitle"])}</h2><p class="section-lead">{e(t["planLead"])}</p></div><span class="availability-chip">{e(t["planAvailability"])}</span></div><div class="plans-grid">{plans}</div><p class="plans-terms">{e(t["planTerms"])}</p><p class="plans-terms">{e(t["mercosur"])}</p><p class="plans-more">{link(prefix + "assets/img/asociate-y-viaja.jpg", t["flyerLink"], "text-link", external=True)}</p></div></section>
-    <section id="cobertura" class="section coverage-section" aria-labelledby="cobertura-titulo"><div class="container coverage-grid"><div><span class="section-kicker">{e(t["coverage"])}</span><h2 class="section-title" id="cobertura-titulo">{e(t["coverageTitle"])}</h2><p class="section-lead">{e(t["coverageLead"])}</p><ul class="coverage-cities"><li>Rivera, Uruguay</li><li>Santana do Livramento, Brasil</li></ul><address class="coverage-address"><strong>{e(t["office"])}</strong>{e(b["street"])}<br>{e(b["neighborhood"])}, Rivera, Uruguay.<br>{e(t["officeNote"])}</address><div class="hero-actions">{link(b["maps"], t["directions"], "btn btn-outline", "pin", True)}{link(wa(t["routeMessage"]), t["routeCta"], "btn btn-primary", "wa", True)}</div></div><figure class="coverage-photo">{picture("aguscar-camion-1", t["serviceCards"][1][3], prefix, "(max-width: 900px) calc(100vw - 36px), 550px")}<figcaption>{e(t["photoCaption"])}</figcaption></figure></div></section>
+    <section id="cobertura" class="section coverage-section" aria-labelledby="cobertura-titulo"><div class="container coverage-grid"><div><span class="section-kicker">{e(t["coverage"])}</span><h2 class="section-title" id="cobertura-titulo">{e(t["coverageTitle"])}</h2><p class="section-lead">{e(t["coverageLead"])}</p><ul class="coverage-cities"><li>Rivera, {e(t["countryName"])}</li><li>Santana do Livramento, Brasil</li></ul><address class="coverage-address"><strong>{e(t["office"])}</strong>{e(b["street"])}<br>{e(b["neighborhood"])}, Rivera, {e(t["countryName"])}.<br>{e(t["officeNote"])}</address><div class="hero-actions">{link(b["maps"], t["directions"], "btn btn-outline", "pin", True)}{link(wa(t["routeMessage"]), t["routeCta"], "btn btn-primary", "wa", True)}</div></div><figure class="coverage-photo">{picture("aguscar-camion-1", t["serviceCards"][1][3], prefix, "(max-width: 900px) calc(100vw - 36px), 550px")}<figcaption>{e(t["photoCaption"])}</figcaption></figure></div></section>
     <section class="section" id="preguntas-frecuentes" aria-labelledby="faq-titulo"><div class="container faq-layout"><div class="section-heading"><span class="section-kicker">{e(t["faqKicker"])}</span><h2 class="section-title" id="faq-titulo">{e(t["faqTitle"])}</h2><p class="section-lead">{e(t["faqLead"])}</p></div><div class="faq-list" id="faq-list">{faqs}</div></div></section>
     <section class="contact-section" id="contacto" aria-labelledby="contacto-titulo"><div class="container contact-inner"><div><h2 id="contacto-titulo">{e(t["contactTitle"])}</h2><p>{e(t["contactLead"])}</p></div><div class="hero-actions">{link("tel:" + phone, t["call"], "btn btn-light", "phone")}{wa_button}</div></div></section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-main"><div>{brand(prefix, t)}<p class="footer-description">{e(t["footerDescription"])}</p></div><div class="footer-block"><h2>{e(t["phone"])}</h2>{link("tel:" + phone, b["displayPhone"])}{link(contact, "WhatsApp", external=True)}{link(b["instagram"], "@aguscarauxilio", external=True)}</div><div class="footer-block"><h2>{e(t["findUs"])}</h2><address>{e(b["street"])}<br>{e(b["neighborhood"])}, Rivera<br>Uruguay</address>{link(b["maps"], t["directions"], external=True)}</div></div><div class="footer-bottom"><p>© <span id="year">2026</span> AGUSCAR. {e(t["rights"])}</p><p>{e(t["credit"])} {link("https://www.fbinformaticauy.com", "FB Informática", external=True)}</p></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div>{brand(prefix, t)}<p class="footer-description">{e(t["footerDescription"])}</p></div><div class="footer-block"><h2>{e(t["phone"])}</h2>{link("tel:" + phone, b["displayPhone"])}{link(contact, "WhatsApp", external=True)}{link(b["instagram"], "@aguscarauxilio", external=True)}</div><div class="footer-block"><h2>{e(t["findUs"])}</h2><address>{e(b["street"])}<br>{e(b["neighborhood"])}, Rivera<br>{e(t["countryName"])}</address>{link(b["maps"], t["directions"], external=True)}</div></div><div class="footer-bottom"><p>© <span id="year">2026</span> AGUSCAR. {e(t["rights"])}</p><p>{e(t["credit"])} {link("https://www.fbinformaticauy.com", "FB Informática", external=True)}</p></div></div></footer>
   <nav class="mobile-contact" aria-label="{e(t["contact"])}">{call_button}{link(contact, "WhatsApp", "btn btn-dark", "wa", True)}</nav>
   <script src="{asset_url(prefix, 'js/year.js')}" defer></script>
   <script src="{asset_url(prefix, 'js/hero-carousel.js')}" defer></script>
@@ -232,7 +332,12 @@ def main():
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(render(lang), encoding="utf-8")
     base = DATA["business"]["url"]
-    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
+    (ROOT / "robots.txt").write_text(
+        "# Busqueda de ChatGPT: acceso permitido al contenido publico.\n"
+        "User-agent: OAI-SearchBot\nAllow: /\n\n"
+        "User-agent: *\nAllow: /\n\n"
+        f"Sitemap: {base}/sitemap.xml\n", encoding="utf-8"
+    )
     ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     xhtml = "http://www.w3.org/1999/xhtml"
     register_namespace("", ns)
@@ -241,6 +346,7 @@ def main():
     for path in ("/", "/pt/"):
         url = SubElement(sitemap, f"{{{ns}}}url")
         SubElement(url, f"{{{ns}}}loc").text = base + path
+        SubElement(url, f"{{{ns}}}lastmod").text = DATA["updatedAt"]
         for code, suffix in (("es-UY", "/"), ("pt-BR", "/pt/"), ("x-default", "/")):
             SubElement(url, f"{{{xhtml}}}link", {"rel": "alternate", "hreflang": code, "href": base + suffix})
     ElementTree(sitemap).write(ROOT / "sitemap.xml", encoding="utf-8", xml_declaration=True)

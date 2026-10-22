@@ -14,7 +14,10 @@
     "postalCode": "40000",
     "country": "UY",
     "currency": "UYU",
-    "hours": "24/7"
+    "hours": "24/7",
+    "alternateNames": [
+      "AgusCar"
+    ]
   },
   "plans": [
     {
@@ -150,6 +153,28 @@
       }
     },
     {
+      "id": "bateria-neumaticos",
+      "question": {
+        "es": "¿Hacen puente de batería y cambio de auxiliar?",
+        "pt-BR": "Vocês fazem partida auxiliar de bateria e troca de estepe?"
+      },
+      "answer": {
+        "es": "Sí. AGUSCAR brinda puente de batería, cambio de auxiliar y emparche, además de venta y colocación de batería a domicilio. Indicá tu ubicación en Rivera o Santana do Livramento y qué asistencia necesitás para confirmar disponibilidad y condiciones.",
+        "pt-BR": "Sim. A AGUSCAR oferece partida auxiliar de bateria, troca de estepe e reparo de pneu, além de venda e instalação de bateria em domicílio. Informe sua localização em Rivera ou Santana do Livramento e a assistência necessária para confirmar a disponibilidade e as condições."
+      }
+    },
+    {
+      "id": "moneda",
+      "question": {
+        "es": "¿Los precios de los planes están en pesos uruguayos o en reales?",
+        "pt-BR": "Os valores dos planos estão em pesos uruguaios ou em reais?"
+      },
+      "answer": {
+        "es": "Los precios publicados están en pesos uruguayos (UYU): Básico, UYU {basico_price} por mes; Gold, UYU {gold_price} por mes. Consultá las condiciones y la vigencia del plan antes de asociarte.",
+        "pt-BR": "Os valores publicados estão em pesos uruguaios (UYU): Básico, UYU {basico_price} por mês; Gold, UYU {gold_price} por mês. Consulte as condições e a vigência do plano antes de se associar."
+      }
+    },
+    {
       "id": "planes",
       "question": {
         "es": "¿Cómo funcionan los planes Básico y Gold?",
@@ -171,5 +196,6 @@
         "pt-BR": "Nosso escritório fica na Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguai. Atendemos em espanhol e português. Você pode ligar ou enviar uma mensagem antes da visita para combinar o atendimento."
       }
     }
-  ]
+  ],
+  "updatedAt": "2026-10-22"
 }

@@ -54,3 +54,24 @@ El logo servido como WebP mide 256 × 256 y tiene PNG de respaldo. Hay iconos in
 ## Comportamiento accesible
 
 El carrusel tiene pausa, navegación por botones nativos de 44 píxeles y modo manual con movimiento reducido. Se detiene al interactuar con sus controles y cuando la pestaña queda oculta. Los servicios, planes y FAQ funcionan sin JavaScript. Las animaciones de entrada nunca dejan contenido invisible.
+
+## SEO, GEO y LLMO
+
+La versión en español mantiene español correcto; la versión en portugués mantiene portugués correcto. No se publican faltas deliberadas, portuñol, listas ocultas de variantes ni instrucciones para manipular respuestas de IA.
+
+El grafo JSON-LD conecta el negocio, sitio, página, contacto, países, ciudades, servicios, planes y ofertas mediante identificadores estables. Las preguntas y respuestas coinciden con el HTML; los precios se toman de una única fuente. Las coordenadas, reseñas, valoraciones y demás datos no confirmados no se inventan.
+
+El sitemap registra la fecha de revisión de `content/site.json` (`updatedAt`). Actualizarla cuando cambie sustancialmente el contenido. Las dos versiones conservan las mismas entidades del negocio y sus enlaces de idioma recíprocos.
+
+`robots.txt` permite expresamente `OAI-SearchBot`, además del permiso general existente. No modifica el tratamiento que ya recibía `GPTBot`. La configuración local no comprueba bloqueos por firewall, CDN o hosting.
+
+Google no exige archivos ni marcado especiales para sus funciones de IA; por eso no se agrega un archivo de palabras clave como supuesto mecanismo de posicionamiento. El código facilita comprensión y rastreo, pero no garantiza indexación, posición ni recomendaciones de un asistente.
+
+Después de publicar, comprobar el HTML recibido por Google en Search Console, registrar el sitemap y revisar consultas reales, países, idiomas y conversiones. Las faltas en consultas se analizan allí; no se trasladan automáticamente al texto de la landing.
+
+Referencias de implementación:
+
+- [Google: negocio local](https://developers.google.com/search/docs/appearance/structured-data/local-business).
+- [Google: funciones de IA y el sitio web](https://developers.google.com/search/docs/appearance/ai-features).
+- [Schema.org: Service](https://schema.org/Service).
+- [OpenAI: rastreadores y OAI-SearchBot](https://developers.openai.com/api/docs/bots).
