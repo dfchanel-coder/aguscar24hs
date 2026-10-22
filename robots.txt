@@ -5,4 +5,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://aguscar.com.uy/sitemap.xml
+Sitemap: https://aguscar24hs.com.uy/sitemap.xml
