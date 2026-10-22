@@ -622,3 +622,24 @@ footer {
 .asociate-text{grid-column:7/-1;display:flex;flex-direction:column;gap:1.2rem}
 .asociate-text .section-lead{color:#4a4a4a}
 @media(max-width:1080px){.asociate-media{grid-column:1/-1}.asociate-text{grid-column:1/-1}}
+
+
+/* Servicios - fondo claro, tarjetas con imagen + overlay legible */
+.section-light-bg { background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f6 100%); color: #111; padding: clamp(3.5rem, 9vw, 6rem) 0; }
+.section-light-bg .section-header { margin-bottom: clamp(2rem, 6vw, 3.2rem); }
+.section-light-bg .section-kicker { color: #A00000; font-weight: 700; letter-spacing: 0.38em; }
+.section-light-bg .section-title { color: #111; }
+.section-light-bg .section-lead { color: #4a4a4a; }
+
+.services-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(1rem, 3vw, 1.6rem); }
+.section-light-bg .service-card { grid-column: span 6; position: relative; overflow: hidden; border-radius: 14px; min-height: 320px; display: flex; align-items: flex-end; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 18px 60px rgba(0,0,0,0.08); transition: transform 220ms ease, box-shadow 220ms ease; background: #000; }
+.section-light-bg .service-card:hover { transform: translateY(-6px); box-shadow: 0 28px 80px rgba(0,0,0,0.12); }
+.section-light-bg .service-media { position: absolute; inset: 0; }
+.section-light-bg .service-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.02); }
+.section-light-bg .service-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.9) 100%); }
+.section-light-bg .service-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 0.6rem; padding: clamp(1.6rem, 4vw, 2.4rem); color: #f5f5f5; width: 100%; }
+.section-light-bg .service-content h3 { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.8rem); color: #fff; text-shadow: 0 8px 40px rgba(0,0,0,0.6); }
+.section-light-bg .service-content p { margin: 0; color: rgba(245,245,245,0.92); max-width: 520px; text-shadow: 0 6px 30px rgba(0,0,0,0.55); }
+
+@media (max-width: 1080px) { .section-light-bg .service-card { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { .section-light-bg .service-card { transition: none; } .section-light-bg .service-card:hover { transform: none; } }
