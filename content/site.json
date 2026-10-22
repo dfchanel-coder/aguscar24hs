@@ -1,0 +1,175 @@
+{
+  "business": {
+    "name": "AGUSCAR",
+    "url": "https://aguscar.com.uy",
+    "telephone": "+59898146411",
+    "displayPhone": "+598 98 146 411",
+    "whatsapp": "59898146411",
+    "instagram": "https://www.instagram.com/aguscarauxilio",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay",
+    "street": "Celia Bueno de Arizaga 2117",
+    "neighborhood": "Barrio La Pedrera",
+    "city": "Rivera",
+    "region": "Rivera",
+    "postalCode": "40000",
+    "country": "UY",
+    "currency": "UYU",
+    "hours": "24/7"
+  },
+  "plans": [
+    {
+      "id": "basico",
+      "price": 490,
+      "featured": false,
+      "name": {
+        "es": "Básico",
+        "pt-BR": "Básico"
+      },
+      "tagline": {
+        "es": "Para viajar con respaldo.",
+        "pt-BR": "Para viajar com tranquilidade."
+      },
+      "benefits": [
+        {
+          "es": "1 traslado al mes",
+          "pt-BR": "1 transporte por mês"
+        },
+        {
+          "es": "Puente de batería",
+          "pt-BR": "Partida auxiliar de bateria"
+        },
+        {
+          "es": "Cambio de auxiliar y emparche",
+          "pt-BR": "Troca de estepe e reparo de pneu"
+        },
+        {
+          "es": "Venta y colocación de batería a domicilio",
+          "pt-BR": "Venda e instalação de bateria em domicílio"
+        },
+        {
+          "es": "50 km sin costo en el rescate",
+          "pt-BR": "50 km sem custo no resgate"
+        },
+        {
+          "es": "30% de descuento en kilómetros extra",
+          "pt-BR": "30% de desconto em quilômetros extras"
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "price": 790,
+      "featured": true,
+      "name": {
+        "es": "Gold",
+        "pt-BR": "Gold"
+      },
+      "tagline": {
+        "es": "Más traslados y más asistencia.",
+        "pt-BR": "Mais transportes e mais assistência."
+      },
+      "benefits": [
+        {
+          "es": "3 traslados al mes",
+          "pt-BR": "3 transportes por mês"
+        },
+        {
+          "es": "Puente de batería",
+          "pt-BR": "Partida auxiliar de bateria"
+        },
+        {
+          "es": "Cambio de auxiliar y emparche",
+          "pt-BR": "Troca de estepe e reparo de pneu"
+        },
+        {
+          "es": "Cerrajería automotriz",
+          "pt-BR": "Chaveiro automotivo"
+        },
+        {
+          "es": "Mecánica ligera y diagnóstico con escáner",
+          "pt-BR": "Mecânica leve e diagnóstico com scanner"
+        },
+        {
+          "es": "Venta y colocación de batería a domicilio",
+          "pt-BR": "Venda e instalação de bateria em domicílio"
+        },
+        {
+          "es": "100 km sin costo en el rescate",
+          "pt-BR": "100 km sem custo no resgate"
+        },
+        {
+          "es": "30% de descuento en kilómetros extra",
+          "pt-BR": "30% de desconto em quilômetros extras"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "id": "solicitar",
+      "question": {
+        "es": "¿Cómo pido una grúa o auxilio?",
+        "pt-BR": "Como solicitar um guincho ou socorro veicular?"
+      },
+      "answer": {
+        "es": "Llamá al +598 98 146 411 o escribinos por WhatsApp. Indicá tu ubicación, marca y modelo del vehículo, qué ocurrió y el destino del traslado, si lo necesitás. Coordinás directamente con AGUSCAR.",
+        "pt-BR": "Ligue para +598 98 146 411 ou fale conosco pelo WhatsApp. Informe sua localização, a marca e o modelo do veículo, o que aconteceu e o destino do transporte, se necessário. Você combina o atendimento diretamente com a AGUSCAR."
+      }
+    },
+    {
+      "id": "horario",
+      "question": {
+        "es": "¿Atienden las 24 horas?",
+        "pt-BR": "O atendimento funciona 24 horas?"
+      },
+      "answer": {
+        "es": "Sí, ofrecemos asistencia en el camino las 24 horas, los 365 días del año. Contactanos para confirmar disponibilidad y coordinar el servicio. Para atención en el escritorio, consultá previamente el horario.",
+        "pt-BR": "Sim, oferecemos assistência na estrada 24 horas por dia, 365 dias por ano. Entre em contato para confirmar a disponibilidade e combinar o atendimento. Para atendimento no escritório, consulte o horário previamente."
+      }
+    },
+    {
+      "id": "cobertura",
+      "question": {
+        "es": "¿Trabajan en Rivera y Santana do Livramento?",
+        "pt-BR": "Vocês atendem em Rivera e Santana do Livramento?"
+      },
+      "answer": {
+        "es": "Sí. Brindamos auxilio y coordinamos traslados en Rivera y Santana do Livramento. Para otras localidades o recorridos entre Uruguay y Brasil, enviá el origen y el destino para confirmar cobertura y condiciones.",
+        "pt-BR": "Sim. Prestamos socorro veicular e organizamos transportes em Rivera e Santana do Livramento. Para outras localidades ou trajetos entre Uruguai e Brasil, informe a origem e o destino para confirmar a cobertura e as condições."
+      }
+    },
+    {
+      "id": "vehiculos",
+      "question": {
+        "es": "¿Qué vehículos pueden trasladar?",
+        "pt-BR": "Quais veículos podem ser transportados?"
+      },
+      "answer": {
+        "es": "Contamos con dos camiones propios para el traslado de vehículos. La coordinación depende del tipo, tamaño y estado del vehículo: enviá esos datos y, si podés, una foto para confirmar el equipo adecuado.",
+        "pt-BR": "Contamos com dois caminhões próprios para o transporte de veículos. O atendimento depende do tipo, tamanho e estado do veículo: envie essas informações e, se possível, uma foto para confirmar o equipamento adequado."
+      }
+    },
+    {
+      "id": "planes",
+      "question": {
+        "es": "¿Cómo funcionan los planes Básico y Gold?",
+        "pt-BR": "Como funcionam os planos Básico e Gold?"
+      },
+      "answer": {
+        "es": "El plan Básico tiene un valor de UYU {basico_price} por mes y el Gold de UYU {gold_price} por mes. Ambos ofrecen traslados mensuales, kilómetros de rescate incluidos y beneficios de asistencia. Compará el detalle de cada plan y consultá vigencia, zonas de cobertura, kilómetros adicionales y condiciones al asociarte.",
+        "pt-BR": "O plano Básico custa UYU {basico_price} por mês e o Gold custa UYU {gold_price} por mês. Ambos oferecem transportes mensais, quilômetros de resgate incluídos e benefícios de assistência. Compare os detalhes de cada plano e consulte a vigência, as áreas de cobertura, os quilômetros adicionais e as condições ao se associar."
+      }
+    },
+    {
+      "id": "direccion",
+      "question": {
+        "es": "¿Dónde queda AGUSCAR y en qué idiomas atienden?",
+        "pt-BR": "Onde fica a AGUSCAR e em quais idiomas vocês atendem?"
+      },
+      "answer": {
+        "es": "Nuestro escritorio está en Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguay. Atendemos en español y portugués. Podés llamarnos o escribirnos antes de acercarte para coordinar la atención.",
+        "pt-BR": "Nosso escritório fica na Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguai. Atendemos em espanhol e português. Você pode ligar ou enviar uma mensagem antes da visita para combinar o atendimento."
+      }
+    }
+  ]
+}

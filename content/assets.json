@@ -1,0 +1,59 @@
+{
+  "aguscar-camion-rojo1": {
+    "file": "aguscar-camion-rojo1.jpg",
+    "width": 2040,
+    "height": 1528,
+    "variants": [
+      {
+        "file": "aguscar-camion-rojo1-480.webp",
+        "width": 480
+      },
+      {
+        "file": "aguscar-camion-rojo1-960.webp",
+        "width": 960
+      },
+      {
+        "file": "aguscar-camion-rojo1-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "aguscar-camion-1": {
+    "file": "aguscar-camion-1.jpg",
+    "width": 2048,
+    "height": 1152,
+    "variants": [
+      {
+        "file": "aguscar-camion-1-480.webp",
+        "width": 480
+      },
+      {
+        "file": "aguscar-camion-1-960.webp",
+        "width": 960
+      },
+      {
+        "file": "aguscar-camion-1-1600.webp",
+        "width": 1600
+      }
+    ]
+  },
+  "aguscar-camion-2": {
+    "file": "aguscar-camion-2.jpg",
+    "width": 2040,
+    "height": 1528,
+    "variants": [
+      {
+        "file": "aguscar-camion-2-480.webp",
+        "width": 480
+      },
+      {
+        "file": "aguscar-camion-2-960.webp",
+        "width": 960
+      },
+      {
+        "file": "aguscar-camion-2-1600.webp",
+        "width": 1600
+      }
+    ]
+  }
+}
