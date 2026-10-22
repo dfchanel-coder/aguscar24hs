@@ -18,10 +18,45 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="assets/img/logo-aguscar.png">
-<script type=" application/ld+json>{@context:https://schema.org,@graph:[{@type:[LocalBusiness,AutomotiveBusiness,Service],@id:https://aguscar.com.uy/#business,
-ame:AGUSCAR,	elephone:+59898146411,areaServed:[{@type:City,
-ame:Rivera},{@type:City,
-ame:Santana do Livramento}],serviceType:[Auxilio vial,Grúa,Remolque,Traslado de vehículos,Guincho,Reboque],availableLanguage:[es,pt-BR],address:{@type:PostalAddress,streetAddress:Celia Bueno de Arizaga 2117,addressLocality:Barrio La Pedrera,addressRegion:Rivera,addressCountry:UY},geo:{@type:GeoCoordinates,latitude:-30.905,longitude:-55.55},sameAs:[https://www.instagram.com/aguscarauxilio,https://maps.app.goo.gl/Ew919R26cumvBt6N8],knowsAbout:[grúa,auxilio vial,emolque,guincho,eboque,	raslado de vehículos]}]}</script>\n</head>
+  
+  <!-- JSON-LD Corregido -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "AutomotiveBusiness", "Service"],
+        "@id": "https://aguscar.com.uy/#business",
+        "name": "AGUSCAR",
+        "telephone": "+59898146411",
+        "areaServed": [
+          { "@type": "City", "name": "Rivera" },
+          { "@type": "City", "name": "Santana do Livramento" }
+        ],
+        "serviceType": ["Auxilio vial", "Grúa", "Remolque", "Traslado de vehículos", "Guincho", "Reboque"],
+        "availableLanguage": ["es", "pt-BR"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Celia Bueno de Arizaga 2117",
+          "addressLocality": "Barrio La Pedrera",
+          "addressRegion": "Rivera",
+          "addressCountry": "UY"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -30.905,
+          "longitude": -55.55
+        },
+        "sameAs": [
+          "https://www.instagram.com/aguscarauxilio",
+          "https://maps.app.goo.gl/Ew919R26cumvBt6N8"
+        ],
+        "knowsAbout": ["grúa", "auxilio vial", "remolque", "guincho", "reboque", "traslado de vehículos"]
+      }
+    ]
+  }
+  </script>
+</head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header>
@@ -78,7 +113,8 @@ ame:Santana do Livramento}],serviceType:[Auxilio vial,Grúa,Remolque,Traslado de
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 8.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3 0 .6.4.6 1.5 1.5 2.1 1.9.6.4.8.3 1-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.5-.3.9-1 1.7-1.8 1.8-.8.1-1.7-.1-3.3-1-2.1-1.2-3.5-2.8-4.2-4.4-.3-.7-.5-1.6 0-2.4Z" fill="currentColor"/></svg>
               Solicitar auxilio por WhatsApp
             </a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Montevideo%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
+            <!-- Maps corregido a Rivera -->
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
               Cómo llegar
             </a>
@@ -214,7 +250,8 @@ ame:Santana do Livramento}],serviceType:[Auxilio vial,Grúa,Remolque,Traslado de
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 8.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3 0 .6.4.6 1.5 1.5 2.1 1.9.6.4.8.3 1-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.5-.3.9-1 1.7-1.8 1.8-.8.1-1.7-.1-3.3-1-2.1-1.2-3.5-2.8-4.2-4.4-.3-.7-.5-1.6 0-2.4Z" fill="currentColor"/></svg>
             Llamar / Escribir por WhatsApp
           </a>
-          <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Montevideo%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
+          <!-- Maps corregido a Rivera -->
+          <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
             Ver ubicación en Google Maps
           </a>
@@ -257,7 +294,8 @@ ame:Santana do Livramento}],serviceType:[Auxilio vial,Grúa,Remolque,Traslado de
         <div class="footer-card">
           <span class="footer-card-label">Dirección</span>
           <span>Celia Bueno de Arizaga 2117, Barrio La Pedrera</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Montevideo%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+          <!-- Maps corregido a Rivera -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
         </div>
       </div>
     </div>
