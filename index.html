@@ -3,117 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AGUSCAR | Auxilio y traslado de vehículos en Uruguay</title>
-  <meta name="description" content="AGUSCAR ofrece servicio de auxilio, grúa y traslado de vehículos en Uruguay. Atención ágil, dos camiones propios. Consultá por WhatsApp al 098 146 411.">
+  <title>AGUSCAR | Auxilio y traslado de vehículos en Rivera, Uruguay</title>
+  <meta name="description" content="AGUSCAR ofrece servicio de auxilio, grúa y traslado de vehículos en Rivera y Santana do Livramento. Atención ágil, dos camiones propios. Consultá por WhatsApp al 098 146 411.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://aguscar.com.uy/">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aguscar.com.uy/">
+  <meta property="og:site_name" content="AGUSCAR">
   <meta property="og:title" content="AGUSCAR | Auxilio y traslado de vehículos">
-  <meta property="og:description" content="Auxilio, grúa y traslado de vehículos. Dos camiones propios. Atención rápida en Uruguay.">
-  <meta property="og:image" content="assets/img/aguscar-camion-rojo.jpg">
+  <meta property="og:description" content="Auxilio, grúa y traslado de vehículos. Dos camiones propios. Atención rápida en Rivera.">
+  <meta property="og:image" content="https://aguscar.com.uy/assets/img/aguscar-camion-rojo.jpg">
+  <meta property="og:image:alt" content="Camión grúa de AGUSCAR">
   <meta property="og:locale" content="es_UY">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://aguscar.com.uy/assets/img/aguscar-camion-rojo.jpg">
   <meta name="theme-color" content="#A00000">
   <link rel="preload" href="assets/img/aguscar-camion-rojo.jpg" as="image">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
-  <!-- Estilos en línea para asegurar el contraste de la sección de servicios -->
-  <style>
-    .section-light-bg {
-      background-color: #f9f9f9;
-      color: #1a1a1a;
-      padding: 60px 0;
-    }
-    .section-light-bg .section-kicker {
-      color: #A00000;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-    .section-light-bg .section-title {
-      color: #111111;
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-    }
-    .section-light-bg .section-lead {
-      color: #4a4a4a;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin-bottom: 40px;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .service-card {
-      background: #ffffff;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-    }
-    .service-media img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .service-content {
-      padding: 24px;
-    }
-    .service-content h3 {
-      color: #111111;
-      font-size: 1.4rem;
-      margin: 0 0 10px 0;
-    }
-    .service-content p {
-      color: #555555;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin: 0;
-    }
-  </style>
   <link rel="icon" type="image/png" href="assets/img/logo-aguscar.png">
-  
+  <link rel="apple-touch-icon" href="assets/img/logo-aguscar.png">
+
+  <!-- Estilos de la sección de servicios y FAQ estática (pueden moverse a css/main.css) -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .section-light-bg { background-color: #f9f9f9; color: #1a1a1a; padding: 60px 0; }
+    .section-light-bg .section-kicker { color: #A00000; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 8px; }
+    .section-light-bg .section-title { color: #111; font-size: 2.2rem; margin-bottom: 12px; }
+    .section-light-bg .section-lead { color: #4a4a4a; font-size: 1.1rem; max-width: 700px; margin-bottom: 40px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 30px; }
+    .service-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,.05); transition: transform .2s ease, box-shadow .2s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 12px rgba(0,0,0,.1); }
+    .service-media img { display: block; width: 100%; height: 220px; object-fit: cover; background: #e5e5e5; }
+    .service-content { padding: 24px; }
+    .service-content h3 { color: #111; font-size: 1.4rem; margin: 0 0 10px; }
+    .service-content p { color: #555; font-size: .95rem; line-height: 1.5; margin: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .service-card { transition: none; }
+      .service-card:hover { transform: none; }
+    }
+    .faq-static details { border-bottom: 1px solid rgba(128,128,128,.35); padding: 14px 0; }
+    .faq-static summary { cursor: pointer; font-weight: 700; }
+    .faq-static p { margin: 10px 0 0; line-height: 1.6; }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "AutomotiveBusiness", "Service"],
+        "@type": ["LocalBusiness", "AutomotiveBusiness"],
         "@id": "https://aguscar.com.uy/#business",
         "name": "AGUSCAR",
+        "url": "https://aguscar.com.uy/",
+        "image": "https://aguscar.com.uy/assets/img/aguscar-camion-rojo.jpg",
+        "logo": "https://aguscar.com.uy/assets/img/logo-aguscar.png",
+        "description": "Auxilio vial, grúa y traslado de vehículos con dos camiones propios en Rivera, Uruguay.",
         "telephone": "+59898146411",
         "areaServed": [
           { "@type": "City", "name": "Rivera" },
           { "@type": "City", "name": "Santana do Livramento" }
         ],
-        "serviceType": ["Auxilio vial", "Grúa", "Remolque", "Traslado de vehículos", "Guincho", "Reboque"],
         "availableLanguage": ["es", "pt-BR"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Celia Bueno de Arizaga 2117",
-          "addressLocality": "Barrio La Pedrera",
+          "addressLocality": "Barrio La Pedrera, Rivera",
           "addressRegion": "Rivera",
           "addressCountry": "UY"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -30.905,
-          "longitude": -55.55
+        "geo": { "@type": "GeoCoordinates", "latitude": -30.905, "longitude": -55.55 },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auxilio vial" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grúa y remolque (guincho / reboque)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traslado de vehículos" } }
+          ]
         },
         "sameAs": [
           "https://www.instagram.com/aguscarauxilio",
           "https://maps.app.goo.gl/Ew919R26cumvBt6N8"
         ],
         "knowsAbout": ["grúa", "auxilio vial", "remolque", "guincho", "reboque", "traslado de vehículos"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo pido una grúa o auxilio en Rivera?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Escribinos o llamanos por WhatsApp al 098 146 411. Atendés directamente con quien te va a asistir y coordinamos el servicio." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacen traslados de vehículos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Trasladamos autos y otros vehículos con grúa propia, cuidando cada detalle desde la carga hasta la entrega." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Atienden en Santana do Livramento (Brasil)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, trabajamos en Rivera y Santana do Livramento. Consultanos por WhatsApp para coordinar tu caso. Atendemos en español y portugués." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuántos camiones tienen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Contamos con dos camiones propios, para responder lo más rápido posible." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Dónde queda AGUSCAR?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nuestro escritorio está en Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguay." }
+          }
+        ]
       }
     ]
   }
@@ -131,7 +135,7 @@
         </div>
       </a>
       <div class="header-actions">
-        <a class="btn btn-ghost btn-compact" href="https://www.instagram.com/aguscarauxilio?utm_source=qr&exln=b3cxNmp2M3YwZGk2" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram de AGUSCAR">
+        <a class="btn btn-ghost btn-compact" href="https://www.instagram.com/aguscarauxilio" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram de AGUSCAR">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
           Instagram
         </a>
@@ -144,11 +148,10 @@
   </header>
 
   <main id="contenido">
-    <!-- El Carousel del Header que mencionas se queda intacto aquí, sin imágenes invasivas -->
     <section id="inicio" class="hero">
       <div class="hero-media hero-carousel" data-hero-carousel>
         <div class="hero-slide is-active" data-slide>
-          <img src="assets/img/aguscar-camion-rojo.jpg" alt="Camión grúa de AGUSCAR en servicio de auxilio vial" loading="eager">
+          <img src="assets/img/aguscar-camion-rojo.jpg" alt="Camión grúa de AGUSCAR en servicio de auxilio vial" width="1600" height="900" loading="eager" fetchpriority="high">
         </div>
         <div class="hero-slide" data-slide>
           <img src="assets/img/aguscar-camion-1.jpg" alt="Flota de AGUSCAR para auxilio y traslado de vehículos" loading="lazy">
@@ -156,10 +159,10 @@
         <div class="hero-slide" data-slide>
           <img src="assets/img/aguscar-camion-2.jpg" alt="Servicio de grúa AGUSCAR en Rivera" loading="lazy">
         </div>
-        <div class="hero-dots" aria-hidden="true">
-          <button class="hero-dot is-active" data-dot></button>
-          <button class="hero-dot" data-dot></button>
-          <button class="hero-dot" data-dot></button>
+        <div class="hero-dots" role="group" aria-label="Seleccionar imagen del carrusel">
+          <button type="button" class="hero-dot is-active" data-dot aria-label="Ver imagen 1" aria-current="true"></button>
+          <button type="button" class="hero-dot" data-dot aria-label="Ver imagen 2"></button>
+          <button type="button" class="hero-dot" data-dot aria-label="Ver imagen 3"></button>
         </div>
         <div class="hero-overlay"></div>
       </div>
@@ -170,13 +173,13 @@
             Auxilio, grúa y traslado de vehículos
           </span>
           <h1>Auxilio rápido<br>cuando lo necesitás</h1>
-          <p class="hero-lead">AGUSCAR cuenta con dos camiones propios para brindar auxilio y traslado de vehículos con atención ágil, directa y confiable en todo el territorio.</p>
+          <p class="hero-lead">AGUSCAR cuenta con dos camiones propios para brindar auxilio y traslado de vehículos con atención ágil, directa y confiable en Rivera y Santana do Livramento.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/59898146411?text=Hola%20AGUSCAR%2C%20necesito%20auxilio%20o%20traslado%20de%20veh%C3%ADculo" target="_blank" rel="noopener noreferrer">
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 8.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3 0 .6.4.6 1.5 1.5 2.1 1.9.6.4.8.3 1-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.5-.3.9-1 1.7-1.8 1.8-.8.1-1.7-.1-3.3-1-2.1-1.2-3.5-2.8-4.2-4.4-.3-.7-.5-1.6 0-2.4Z" fill="currentColor"/></svg>
               Solicitar auxilio por WhatsApp
             </a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
               Cómo llegar
             </a>
@@ -205,18 +208,17 @@
       </div>
     </section>
 
-    <!-- SECCIÓN DE SERVICIOS REDISEÑADA Y CLARA -->
-    <section class="section-light-bg">
+    <section id="servicios" class="section-light-bg" aria-labelledby="servicios-titulo">
       <div class="container">
         <header class="section-header">
           <span class="section-kicker">Servicios</span>
-          <h2 class="section-title">Auxilio y traslado de vehículos</h2>
+          <h2 id="servicios-titulo" class="section-title">Auxilio y traslado de vehículos</h2>
           <p class="section-lead">Soluciones rápidas para poner tu vehículo en movimiento o trasladarlo con seguridad al destino que necesites.</p>
         </header>
         <div class="services-grid">
           <article class="service-card">
             <div class="service-media">
-              <img src="assets/img/aguscar-camion-1.jpg" alt="Camión de AGUSCAR realizando auxilio vial" loading="lazy">
+              <img src="assets/img/aguscar-camion-1.jpg" alt="Camión de AGUSCAR realizando auxilio vial" width="600" height="440" loading="lazy">
             </div>
             <div class="service-content">
               <h3>Auxilio vial</h3>
@@ -225,8 +227,8 @@
           </article>
           <article class="service-card">
             <div class="service-media">
-              <!-- Reemplazada la imagen para ilustrar correctamente el traslado y que sea estético -->
-              <img src="assets/img/aguscar-traslado-remolque.jpg" alt="Camión de AGUSCAR listo para traslado de vehículos" loading="lazy">
+              <!-- Si la imagen no carga, se usa automáticamente una de respaldo -->
+              <img src="assets/img/aguscar-traslado-remolque.jpg" alt="Camión de AGUSCAR listo para traslado de vehículos" width="600" height="440" loading="lazy" onerror="this.onerror=null;this.src='assets/img/aguscar-camion-2.jpg';">
             </div>
             <div class="service-content">
               <h3>Traslado de vehículos</h3>
@@ -235,7 +237,7 @@
           </article>
           <article class="service-card">
             <div class="service-media">
-              <img src="assets/img/aguscar-servicio.jpg" alt="Servicio de auxilio y grúa AGUSCAR" loading="lazy">
+              <img src="assets/img/aguscar-servicio.jpg" alt="Servicio de auxilio y grúa AGUSCAR" width="600" height="440" loading="lazy">
             </div>
             <div class="service-content">
               <h3>Atención ágil y directa</h3>
@@ -292,7 +294,7 @@
               <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 8.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3 0 .6.4.6 1.5 1.5 2.1 1.9.6.4.8.3 1-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.5-.3.9-1 1.7-1.8 1.8-.8.1-1.7-.1-3.3-1-2.1-1.2-3.5-2.8-4.2-4.4-.3-.7-.5-1.6 0-2.4Z" fill="currentColor"/></svg>
               Consultar disponibilidad
             </a>
-            <a class="btn btn-ghost" href="https://www.instagram.com/aguscarauxilio?utm_source=qr&exln=b3cxNmp2M3YwZGk2" target="_blank" rel="noopener noreferrer">Seguinos en Instagram</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/aguscarauxilio" target="_blank" rel="noopener noreferrer">Seguinos en Instagram</a>
           </div>
         </div>
       </div>
@@ -311,21 +313,44 @@
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 8.8c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3 0 .6.4.6 1.5 1.5 2.1 1.9.6.4.8.3 1-.1l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.5-.3.9-1 1.7-1.8 1.8-.8.1-1.7-.1-3.3-1-2.1-1.2-3.5-2.8-4.2-4.4-.3-.7-.5-1.6 0-2.4Z" fill="currentColor"/></svg>
             Llamar / Escribir por WhatsApp
           </a>
-          <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-outline-light" href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
             Ver ubicación en Google Maps
           </a>
         </div>
       </div>
     </section>
-      <section id="preguntas-frecuentes" class="faq">
+
+    <section id="preguntas-frecuentes" class="faq" aria-labelledby="faq-titulo">
       <div class="container">
         <header class="faq-header">
           <span class="section-kicker">Preguntas frecuentes</span>
-          <h2 class="section-title">Grúa, auxilio vial y traslado en Rivera - Frontera con Brasil</h2>
+          <h2 id="faq-titulo" class="section-title">Grúa, auxilio vial y traslado en Rivera - Frontera con Brasil</h2>
           <p class="section-lead">Respuestas directas para consultas frecuentes en Rivera y Santana do Livramento.</p>
         </header>
-        <div id="faq-list" class="faq-list" aria-live="polite"></div>
+        <!-- Contenido estático (indexable aunque el JS falle). seo-intent.js puede reemplazarlo o ampliarlo. -->
+        <div id="faq-list" class="faq-list faq-static" aria-live="polite">
+          <details>
+            <summary>¿Cómo pido una grúa o auxilio en Rivera?</summary>
+            <p>Escribinos o llamanos por WhatsApp al <a href="https://wa.me/59898146411" target="_blank" rel="noopener noreferrer">098 146 411</a>. Hablás directamente con quien te va a asistir y coordinamos el servicio.</p>
+          </details>
+          <details>
+            <summary>¿Hacen traslados de vehículos?</summary>
+            <p>Sí. Trasladamos autos y otros vehículos con grúa propia, cuidando cada detalle desde la carga hasta la entrega.</p>
+          </details>
+          <details>
+            <summary>¿Atienden en Santana do Livramento (Brasil)?</summary>
+            <p>Sí, trabajamos en Rivera y Santana do Livramento. Consultanos por WhatsApp para coordinar tu caso. Atendemos en español y portugués.</p>
+          </details>
+          <details>
+            <summary>¿Cuántos camiones tienen?</summary>
+            <p>Contamos con dos camiones propios, para responder lo más rápido posible.</p>
+          </details>
+          <details>
+            <summary>¿Dónde queda AGUSCAR?</summary>
+            <p>Nuestro escritorio está en Celia Bueno de Arizaga 2117, Barrio La Pedrera, Rivera, Uruguay.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -333,7 +358,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="brand" href="#inicio">
+        <a class="brand" href="#inicio" aria-label="AGUSCAR - volver al inicio">
           <img src="assets/img/logo-aguscar.png" alt="Logotipo de AGUSCAR" width="56" height="56">
           <div class="brand-text">
             <span class="brand-name">AGUSCAR</span>
@@ -349,18 +374,18 @@
         </div>
         <div class="footer-card">
           <span class="footer-card-label">Instagram</span>
-          <a href="https://www.instagram.com/aguscarauxilio?utm_source=qr&exln=b3cxNmp2M3YwZGk2" target="_blank" rel="noopener noreferrer">@aguscarauxilio</a>
+          <a href="https://www.instagram.com/aguscarauxilio" target="_blank" rel="noopener noreferrer">@aguscarauxilio</a>
         </div>
         <div class="footer-card">
           <span class="footer-card-label">Dirección</span>
           <span>Celia Bueno de Arizaga 2117, Barrio La Pedrera</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Celia%20Bueno%20de%20Arizaga%202117%2C%20Barrio%20La%20Pedrera%2C%20Rivera%2C%20Uruguay" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <span>© <span id="year"></span> AGUSCAR. Todos los derechos reservados.</span>
+        <span>© <span id="year">2026</span> AGUSCAR. Todos los derechos reservados.</span>
         <span class="footer-credit">Desarrollado por <a href="https://www.fbinformaticauy.com" target="_blank" rel="noopener noreferrer">FB Informática</a></span>
       </div>
     </div>
