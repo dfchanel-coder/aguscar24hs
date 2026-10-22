@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "project": "AGUSCAR",
+    "zone": "Rivera - Santana do Livramento (frontera Uruguay-Brasil)",
+    "languages": ["es", "pt-BR"],
+    "updatedAt": "2026-10-21T00:00:00.000Z",
+    "notes": "rawQuery = variantes fonéticas/dialectales SOLO para agrupación. El contenido visible SIEMPRE debe usar formas correctas (grúa, auxilio vial, guincho, reboque)."
+  },
+  "intents": [
+    {
+      "id": "grua-auxilio-rivera",
+      "canonical": { "es": "grúa y auxilio vial en Rivera", "ptBR": "guincho e socorro veicular em Rivera" },
+      "targetSection": "faq",
+      "priority": 1,
+      "queries": ["grúa rivera", "grua rivera", "auxilio vial rivera", "guincho rivera", "guincho santana do livramento"],
+      "rawQuery": ["guinchaste", "guinllo", "guinxaste", "guinxo", "crua", "grua", "ausilio"],
+      "visibleFaq": {
+        "questionEs": "¿Hacen grúa, auxilio vial o traslado de vehículos en Rivera?",
+        "answerEs": "Sí. AGUSCAR ofrece auxilio vial, grúa y traslado de vehículos en Rivera y en la zona fronteriza con Santana do Livramento, con dos camiones propios y atención directa por WhatsApp.",
+        "questionPt": "Fazem guincho, socorro veicular ou reboque em Rivera?",
+        "answerPt": "Sim. A AGUSCAR faz guincho, socorro veicular e transporte/reboque de veículos em Rivera e na região fronteiriça com Santana do Livramento, com dois caminhões próprios e atendimento direto pelo WhatsApp."
+      },
+      "status": "active"
+    },
+    {
+      "id": "traslado-reboque-frontera",
+      "canonical": { "es": "traslado y remolque de vehículos frontera", "ptBR": "reboque e transporte de veículos na fronteira" },
+      "targetSection": "faq",
+      "priority": 2,
+      "queries": ["traslado de vehiculos rivera", "remolque rivera", "reboque santana do livramento", "transporte de vehiculo frontera"],
+      "rawQuery": ["traer con grua", "guinchar auto"],
+      "visibleFaq": {
+        "questionEs": "¿Realizan traslado o remolque de vehículos entre Rivera y Santana do Livramento?",
+        "answerEs": "Sí. Coordinamos el traslado/remolque de vehículos con grúa propia entre Rivera y Santana do Livramento según el caso. Consultanos por WhatsApp al 098 146 411 para confirmar disponibilidad.",
+        "questionPt": "Fazem reboque ou transporte de veículo entre Rivera e Santana do Livramento?",
+        "answerPt": "Sim. Fazemos o reboque/transporte de veículos com guincho próprio entre Rivera e Santana do Livramento, conforme a necessidade. Consulte pelo WhatsApp pelo número +598 98 146 411."
+      },
+      "status": "active"
+    },
+    {
+      "id": "atencion-24hs",
+      "canonical": { "es": "auxilio vial rápido en Rivera", "ptBR": "socorro veicular rápido na fronteira" },
+      "targetSection": "faq",
+      "priority": 3,
+      "queries": ["grua 24 horas rivera", "auxilio 24 horas rivera", "guincho 24 horas santana do livramento"],
+      "rawQuery": ["vinticuatro oras", "24 oras", "urgente grua"],
+      "visibleFaq": {
+        "questionEs": "¿Atiende AGUSCAR fuera de horario o con urgencia?",
+        "answerEs": "Sí. Atendemos urgencias de auxilio vial y traslado de vehículos. Lo más directo es escribirnos por WhatsApp al 098 146 411 indicando ubicación y tipo de servicio para coordinar lo antes posible.",
+        "questionPt": "Atendem com urgência na fronteira?",
+        "answerPt": "Sim. Atendemos socorro veicular e reboque com urgência em Rivera e em Santana do Livramento. O mais prático é nos chamar pelo WhatsApp +598 98 146 411 informando localização e tipo de serviço."
+      },
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "es": ["Rivera", "Tranqueras", "Vichadero", "Minas de Corrales", "Zona fronteriza Rivera - Santana do Livramento"],
+    "ptBR": ["Santana do Livramento", "Região fronteiriça Rivera - Santana do Livramento"]
+  }
+}
